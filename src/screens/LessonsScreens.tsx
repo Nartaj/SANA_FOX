@@ -10,7 +10,7 @@ import virusesImg from '../assets/icons/Viruses-icon.png';
 import habitsImg from '../assets/icons/Basic-habits-icon.png';
 import background from '../assets/icons/Background.jpg';
 
-// Структура данных: теперь внутри каждого урока массив коротких страниц (pages) вместо одного текста
+// Структура данных: внутри каждого урока массив коротких страниц (pages) вместо одного текста
 // Ключевые термины выделены звездочками *текст* для автоматической подсветки
 const LESSONS_DATA: Record<string, { id: string; title: string; pages: string[] }[]> = {
   m1: [
