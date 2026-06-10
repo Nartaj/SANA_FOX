@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+html {
+  background-color: #000;
+  /* Чтобы не было белой вспышки при загрузке */
+}
+
+/* src/index.css */
+.text-shadow-sm {
+  /* Тень: смещение 1px по X и Y, размытие 2px, цвет черный */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.text-outline {
+  /* Более жесткий вариант (как обводка) */
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  /* Твоя картинка */
+  background-image: url('./assets/icons/Background.jpg') !important;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+  /* Нужно для слоя затемнения */
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  /* 45% черного поверх картинки */
+  z-index: -1;
+  /* Чтобы слой был ЗА текстом, но ПЕРЕД картинкой */
+  pointer-events: none;
+}
+
+
+
+#root {
+  min-height: 100vh;
+  background: transparent !important;
+  /* Убираем возможный белый/черный фон у корня */
+}
