@@ -80,18 +80,7 @@ export const ProfileHome: React.FC = () => {
           )}
         </div>
 
-        <button className="bg-white/5 border border-white/10 p-6 rounded-3xl flex items-center justify-between hover:bg-white/10 transition-colors">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-white/40">
-              <Share2 size={24} />
-            </div>
-            <div className="text-left">
-              <h3 className="font-bold text-lg">Share Progress</h3>
-              <p className="text-xs text-white/40 uppercase tracking-widest">Show off your skills</p>
-            </div>
-          </div>
-          <ChevronRight size={18} className="text-white/20" />
-        </button>
+      
       </div>
     </div>
   );
